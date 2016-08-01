@@ -1,0 +1,53 @@
+  1 set nocompatible              " required
+  2 filetype off                  " required
+  3 
+  4 " set the runtime path to include Vundle and initialize
+  5 set rtp+=~/.vim/bundle/Vundle.vim
+  6 call vundle#begin()
+  7 
+  8 set splitbelow
+  9 set splitright
+ 10 
+ 11 "split navigations
+ 12 nnoremap <C-J> <C-W><C-J>
+ 13 nnoremap <C-K> <C-W><C-K>
+ 14 nnoremap <C-L> <C-W><C-L>
+ 15 nnoremap <C-H> <C-W><C-H>
+ 16 
+ 17 
+ 18 " alternatively, pass a path where Vundle should install plugins
+ 19 "call vundle#begin('~/some/path/here')
+ 20 
+ 21 " let Vundle manage Vundle, required
+ 22 Plugin 'gmarik/Vundle.vim'
+ 23 Plugin 'tmhedberg/SimpylFold'
+ 24 Plugin 'vim-scripts/indentpython.vim'
+ 25 Plugin 'scrooloose/syntastic'
+ 26 Plugin 'jnurmine/Zenburn'
+ 27 Plugin 'altercation/vim-colors-solarized'
+ 28 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+ 29 
+ 30 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+ 31 
+ 32 
+ 33 " All of your Plugins must be added before the following line
+ 34 call vundle#end()            " required
+ 35 filetype plugin indent on    " required
+ 36 
+ 37 " Enable folding
+ 38 set foldmethod=indent
+ 39 set foldlevel=99
+ 40 
+ 41 " Enable folding with the spacebar
+ 42 nnoremap <space> za
+ 43 
+ 44 
+ 45 
+ 46 set encoding=utf-8
+ 47 
+ 48 let python_highlight_all=1
+ 49 syntax on
+ 50 
+ 51 call togglebg#map("<F5>")
+ 52 
+ 53 set nu
